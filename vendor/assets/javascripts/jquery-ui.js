@@ -3580,8 +3580,11 @@ $.widget("ui.sortable", $.ui.mouse, {
 			}
 
 			var p = t.offset();
+			if(null != p)
+			{
 			item.left = p.left;
 			item.top = p.top;
+			}
 		};
 
 		if(this.options.custom && this.options.custom.refreshContainers) {
